@@ -23,6 +23,10 @@ app.use(express.json());
 
 app.post("/server", serverResponse);
 
+app.get("/server", (req, res) => {
+  res.status(200).json({ ok: true });
+});
+
 app.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
 });
