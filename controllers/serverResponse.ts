@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { VariablesObj } from "../types/types";
 import { parse } from "../parser/parserFunc";
 
+// checks if the user didn't submit an empty string
 const hasNoEmptyStringValues = (obj: VariablesObj): boolean => {
   return Object.values(obj).every((value) => value !== "");
 };
