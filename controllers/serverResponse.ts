@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { VariablesObj } from "../types/types";
-import { parse } from "../parser/parserFunc";
+import { parse } from "../parser/parserFunc.js";
 
 // checks if the user didn't submit an empty string
 const hasNoEmptyStringValues = (obj: VariablesObj): boolean => {
