@@ -10,9 +10,14 @@ const PORT = process.env.PORT || 8080;
 
 app.use(
   cors({
-    origin: process.env.ORIGIN
+    origin: process.env.ORIGIN,
+    methods: ["POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type"]
   })
 );
+
+// cors setup for preflight
+app.options("/server", cors());
 
 app.use(express.json());
 
