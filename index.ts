@@ -1,5 +1,5 @@
 import express, { Express } from "express";
-import { serverResponse } from "./controllers/serverResponse";
+import { serverResponse } from "./controllers/serverResponse.js";
 import cors from "cors";
 import { config } from "dotenv";
 
